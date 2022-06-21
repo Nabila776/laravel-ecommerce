@@ -47,13 +47,9 @@
                     <div class="form-group ">
                         <label for="exampleInputEmail1">Catagory</label>
                         <select name="p_category" class="form-control form-control-md" required>
-                            <option value="1">Fashion</option>
-                            <option value="1">Gadget</option>
-                            <option value="1">T-shirt</option>
-                            <option value="1">E-electronic</option>
-                            <option value="1">Desktop </option>
-                            <option value="1">Ac</option>
-                            <option value="1">Laptop</option>
+                            @foreach($product as $value)
+                            <option value="{{$value->id}}">{{$value->c_name}}</option>
+                            @endforeach
                         </select>
 
                     </div>

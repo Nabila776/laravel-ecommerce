@@ -68,18 +68,18 @@
             <a href="index3.html" class="brand-link">
             <img src="{{asset('dist/img/brandingLogo.png')}}" alt="AdminLTE Logo"
                class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">ecommoerce-logo</span>
+            <span class="brand-text font-weight-light">ecommerce-logo</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
                <!-- Sidebar user panel (optional) -->
                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                   <div class="image">
-                     <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2 text-center"
+                     <img src="{{asset('dist/img/avatar2.png')}}" class="img-circle elevation-2 text-center"
                         alt="User Image">
                   </div>
                   <div class="info">
-                     <a href="#" class="d-block">Arman Hosen</a>
+                     <a href="#" class="d-block">Nabila Islam</a>
                   </div>
                </div>
                <!-- Sidebar Menu -->
@@ -218,6 +218,14 @@
                            </button>
                         </div>
                         @endif
+                         @if (session('error'))
+                        <div class="alert alert-danger">
+                           {{ session('error') }}
+                           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                        @endif
                         @if($errors->any())
                             <div class="alert alert-danger">
                                 {{$errors->first()}}
@@ -242,7 +250,7 @@
       <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
       <script>
          $.widget.bridge('uibutton', $.ui.button)
-         
+
       </script>
       <!-- Bootstrap 4 -->
       <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

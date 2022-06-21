@@ -25,3 +25,16 @@ route::post('/admin','App\Http\Controllers\Admin\AuthController@postLogin')->nam
 
 
 route::get('/dashboard','App\Http\Controllers\Admin\DashboardController@index')->middleware('preventlogin')->name('dashboard');
+
+route::get('/homePage','App\Http\Controllers\Website\HomeController@index')->name('homePage');
+route::get('/shop','App\Http\Controllers\Website\ShopController@index')->name('shop');
+route::get('/shopDetails','App\Http\Controllers\Website\ShopController@details')->name('shopDetails');
+route::get('/shoppingCart','App\Http\Controllers\Website\ShopController@cart')->name('shoppingCart');
+
+route::get('/blog','App\Http\Controllers\Website\BlogController@index')->name('blog');
+route::get('/blogDetails','App\Http\Controllers\Website\BlogController@details')->name('blogDetails');
+
+route::get('/checkout','App\Http\Controllers\Website\CheckoutController@index')->name('checkout');
+
+route::get('/contact','App\Http\Controllers\Website\ContactController@index')->name('contact');
+
